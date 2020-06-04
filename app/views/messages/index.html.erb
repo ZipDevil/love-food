@@ -1,0 +1,35 @@
+<div class="card-columns">
+  <div class="page">
+    <p id="notice"><%= notice %></p>
+    <h1>Messages</h1>
+    <p>
+      Are you a owner of a farm? Have overstocked crops or veggies going to waste soon?<br>
+      Leave a note in the message, we'll send volunteers to help collecting them.
+    </p>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @messages.each do |message| %>
+          <tr>
+            <td><%= message.title %></td>
+            <td><%= message.body %></td>
+            <td><%= message.helper %></td>
+            <td><%= link_to 'Show', message %></td>
+            <td><%= link_to 'Edit', edit_message_path(message) %></td>
+            <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'New message', new_message_path %>
+    </button>
+  </div>
+</div>

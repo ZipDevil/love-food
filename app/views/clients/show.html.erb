@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <div class="page">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Full name:</strong>
+      <%= @client.full_name %>
+    </p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @client.phone %>
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @client.email %>
+    </p>
+    <p>
+      <h4>Appointments:</h4>
+      <% if @client.appointments.exists? %>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Appointment type</th>
+            <th>Appointment time</th>
+            <th colspan="5"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @client.appointments.each do |p| %>
+            <tr>
+              <td><%= p.appointment_type %></td>
+              <td><%= p.appointment_time %></td>
+              <td><%= link_to 'Show', p %></td>
+              <td><%= link_to 'Update', edit_appointment_path(p) %></td>
+              <td><%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% else %>
+        <p>This client has no appointment.</p>
+      <% end %>
+      <br>
+    </p>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'New appointment', new_appointment_path %>
+    </button>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'Edit', edit_client_path(@client) %>
+    </button>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'Back', clients_path %>
+    </button>
+  </div>
+</div>

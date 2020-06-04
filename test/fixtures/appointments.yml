@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointment_type: MyString
+  appointment_time: 2020-05-25 14:20:45
+  client: one
+
+two:
+  appointment_type: MyString
+  appointment_time: 2020-05-25 14:20:45
+  client: two

@@ -1,0 +1,32 @@
+<div class="form">
+  <%= form_for(appointment) do |f| %>
+    <% if appointment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+        <ul>
+        <% appointment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :appointment_type %><br>
+      <% Appointment::TYPE.each do |s| %>
+        <%= f.radio_button :appointment_type, s %>
+        <%= f.label :appointment_type, s, value: s, class: "checkbox-label" %><br>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :appointment_time %>
+      <%= f.datetime_select(:appointment_time, order: [:hour, :month, :day, :year], start_year: 2020) %>
+    </div>
+    <p>
+      <strong>Client:</strong>
+      <%= f.collection_select :client_id, Client.all, :id, :full_name, include_blank: true %>
+    </p>
+    <div class="actions">
+      <button class="btn btn-primary btn-sm"><%= f.submit %></button>
+    </div>
+  <% end %>
+</div>

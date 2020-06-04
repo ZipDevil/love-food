@@ -1,0 +1,197 @@
+/* Using bootstrap-rails-popover gem:
+*= require bootstrap/bootstrap-rails-tooltip
+*= require bootstrap/bootstrap-rails-popover
+*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+// @import "font-awesome";
+
+$white: white;
+$black: black;
+$blue: #c7efff;
+$btn: #e0635a;
+$pur: #fcebfc;
+$tex: #ccffc9;
+$bg: linear-gradient(to bottom right, #490D40, #C57ED3);
+
+.navbar {
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+}
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #ddd;
+    }
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+.footer {
+    margin: 2rem;
+}
+body {
+    background: url(/assets/bg.jpg);
+    background-size: 100%;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 20px;
+}
+h1,
+h2 {
+    font-weight: bold;
+    color: $tex;
+    text-shadow: 2px 2px $black;
+}
+h3,
+h5 {
+    color: $white;
+    text-shadow: 1px 1px $black;
+    margin-bottom: 8px;
+}
+p {
+    font-size: 16px;
+    color: $tex;
+}
+a:visited {
+    color: #ddd;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+}
+.jumbotron {
+    margin-top: 3rem;
+    background: transparent;
+    color: $white;
+    text-align: center;
+    p {
+            color: $white;
+            font-size: 26px;
+    }
+}
+.row {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+}
+.form {
+    margin-top: 2rem;
+}
+.page {
+    margin-top: 3rem auto;
+    padding: 1rem 10rem 2rem 10rem;
+    background: linear-gradient(rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 90%);
+}
+.pagein {
+    margin-top: 1rem auto;
+    padding: 1rem 10rem 2rem 10rem;
+    background: linear-gradient(rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 90%);
+}
+.field {
+    margin: 1rem auto;
+    color: $white;
+}
+.actions {
+    margin-top: 0.5rem;
+    color: transparent;
+    display: inline-block;
+}
+.table {
+    margin: 10px auto;
+    color: $white;
+    font-size: 14px;
+}
+.table-hover> tbody> tr:hover{
+    background-color: $btn;
+}
+.link {
+    color: $tex;
+}
+.btn-primary {
+    color: $white;
+    border-color: $white;
+    margin-bottom: 5px;
+}
+.btn-sm {
+    background-color: $btn;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.alert {
+    padding: 20px;
+    background-color: #781e48;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+.right {
+    float: right
+}​
+.checkbox-label {
+
+}
+img,
+video,
+audio {
+    margin-top: 2px;
+    max-width: 80%;
+}
+caption {
+    float: left;
+    clear: both;
+}

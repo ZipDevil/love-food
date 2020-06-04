@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <div class="page">
+    <h1>New Appointment</h1>
+    <%= render 'form', appointment: @appointment %>
+    <br>
+    <h6>Don't see your name here? Create a new account!</h6>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'New Account', new_client_path %>
+    </button>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'Back', appointments_path %>
+    </button>
+  </div>
+</div>

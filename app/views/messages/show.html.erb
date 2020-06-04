@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="page">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Message Title:</strong>
+      <%= @message.message_type %>
+    </p>
+    <p>
+      <strong>Message Body:</strong>
+      <%= @message.message_time %>
+    </p>
+    <p>
+      <strong>Client:</strong>
+      <%= @message.client.full_name %>
+    </p>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'Edit', edit_message_path(@message) %>
+    </button>
+    <button class="btn btn-outline-primary btn-sm">
+    <%= link_to 'Back', messages_path %>
+    </button>
+  </div>
+</div>

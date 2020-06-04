@@ -1,0 +1,65 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to LoveFood.org</h1><br>
+    <p>
+      We love to share our food with the others,    <br>
+      especially those who need it more than us do. <br>
+      Help us nourishing people during COVID-19,    <br>
+      a little love/food goes a long way.           <br>
+    </p><br>
+    <div data-content="Bulk Donation? Check *Helper Needed* in the appointment page!"
+     data-toggle="popover" title="Popover">
+     <%= button_to 'Get involved', appointments_path, :method => :get, :class => "btn btn-primary btn-lg"%>
+    </div><br><br>
+    <!-- temp use of alert to replace the popover for now -->
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Farmer with overgrown crops?? Have overstocked produce going to waste soon??<br>
+      Select Bulk Donation in the appointment page. We'll contact you for more details.
+    </div>
+    <!-- Popover
+    <%#= link_to 'Bulk Donation? Check *Helper Needed* in the appointment page!', new_appointment_path, :remote => true %>
+
+    <%#= link_to 'Add release', new_release_path, :remote => true %>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          Are you a owner of a farm?<br>
+          Have overstocked produce going to waste soon?<br>
+          Mark your donate appointment as a bulk donation,<br>
+          we'll contact you for details on how can we help to collect them.
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h3>We offer drop-off service</h3>
+      <p>For people who couldn't make it to local foodbank and/or drop off locations
+        (especially seniors and special need family with kids),
+        we help arrange volunteer drop off service.<br>
+        Please make an appointment with us and we will contact you for futher details
+        about the drop off time and locations.
+      </p>
+      <button type="button" class="btn btn-outline-primary btn-sm"><%= link_to 'Appointment', new_appointment_path %></button>
+    </div>
+    <div class="col-lg-6">
+      <h3>Help us spread the love</h3>
+      <h5>"In times of hardship, collaboration and generosity are key." <br>
+        <span class="right">- The Guardian</span>
+      </h5><br>
+      <p>
+        We need your help now more than ever!<br>
+        many people are in need of food supply right now due to the coronavirus(COVID-19) pandemic.
+      </p>
+      <button class="btn btn-outline-primary btn-sm">
+        <%= link_to 'Join Us', new_client_path %>
+      </button>
+      <button type="button" class="btn btn-outline-primary btn-sm">
+        <%= link_to 'More Info', 'https://foodbankcenc.org/' %>
+      </button>
+     </div>
+  </div>
+</div>

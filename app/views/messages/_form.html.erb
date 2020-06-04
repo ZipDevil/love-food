@@ -1,0 +1,12 @@
+<%= simple_form_for(@message, remote: request.xhr?, html: { data: { modal: true } }) do |f| %>
+  <div class="modal-body">
+    <%= f.input :title %>
+    <%= f.input :body %>
+    <%= f.input :helper %>
+    <%= f.collection_select :client_id, Client.all, :id, :full_name, include_blank: true %>
+  </div>
+
+  <div class="modal-footer">
+    <%= f.button :submit, class: 'btn-success' %>
+  </div>
+<% end %>
