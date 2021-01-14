@@ -25,7 +25,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+// using the func in customized js files
 require("custom/home")
 
 $(function () {
